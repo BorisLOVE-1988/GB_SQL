@@ -45,10 +45,6 @@ from (select count(user_id) my_like,
 		order by user_id
 		limit 10) my_likes;
 
--- вариант 2:
-select count(user_id) my_like
-from likes
-where user_id in (select user_id from profiles order by birthday desc);
 
 -- 3 Определить кто больше поставил лайков (всего) - мужчины или женщины?
 
